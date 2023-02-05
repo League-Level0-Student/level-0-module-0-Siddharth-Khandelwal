@@ -5,8 +5,9 @@ public static void main(String[] args) {
 	int x = 100;
 	Robot rob = new Robot();
 	rob.setSpeed(5);
+	rob.setPenWidth(15);
 	rob.turn(270);
-	rob.move(x*2);
+	rob.move(x*2+50);
 	rob.turn(90);
 	rob.move(x);
 	rob.turn(90);
@@ -45,6 +46,18 @@ public static void main(String[] args) {
 	rob.move(x);
 	rob.turn(90);
 	rob.move(x);
+	rob.penUp();
+	rob.move(x);
+	rob.penUp();
+	rob.turn(270);
+	rob.move(x);
+	rob.turn(180);
+	rob.penDown();
+	rob.move(150);
+	rob.penUp();
+	rob.move(35);
+	rob.penDown();
+	rob.move(15);
 	rob.hide();
 }
 }
