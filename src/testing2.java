@@ -1,12 +1,16 @@
+import java.awt.Color;
+import java.util.Iterator;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class testing2 {
 public static void main(String[] args) {
 	int x = 100;
 	Robot rob = new Robot();
-	rob.setSpeed(5);
+	rob.setSpeed(10);
 	rob.setPenWidth(15);
-	rob.turn(270);
+	rob.setPenColor(Color.GREEN);
+	rob.turn(-90);
 	rob.move(x*2+50);
 	rob.turn(90);
 	rob.move(x);
@@ -15,9 +19,9 @@ public static void main(String[] args) {
 	rob.move(x);
 	rob.turn(180);
 	rob.move(x);
-	rob.turn(270);
+	rob.turn(-90);
 	rob.move(x);
-	rob.turn(270);
+	rob.turn(-90);
 	rob.move(x);
 	rob.turn(90);
 	rob.move(x);
@@ -27,7 +31,7 @@ public static void main(String[] args) {
 	rob.turn(180);
 	rob.move(2*x);
 	rob.penDown();
-	rob.turn(270);
+	rob.turn(-90);
 	rob.move(x);
 	rob.penUp();
 	rob.move(x/2);
@@ -49,7 +53,7 @@ public static void main(String[] args) {
 	rob.penUp();
 	rob.move(x);
 	rob.penUp();
-	rob.turn(270);
+	rob.turn(-90);
 	rob.move(x);
 	rob.turn(180);
 	rob.penDown();
