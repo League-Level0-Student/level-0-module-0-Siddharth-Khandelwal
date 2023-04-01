@@ -28,9 +28,10 @@ JFrame jamal = new JFrame();
 	patrick.add(tom);
 	patrick.add(lamar);
 	patrick.add(tallon);
+	patrick.add(bonnie);
 	patrick.add(bob);
 	patrick.add(borna);
-	patrick.add(bonnie);
+	
 	jamal.setVisible(true);
 	jamal.pack();
 	bob.addActionListener(this);
