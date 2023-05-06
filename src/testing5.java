@@ -1,3 +1,4 @@
+import java.awt.Robot;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,8 +10,9 @@ import javax.swing.JPanel;
 public class testing5 implements ActionListener {
 	JButton button1 = new JButton("Special Button :)");
 	JButton button2 = new JButton("Another button");
-public static void main(String[] args) {
+	JButton button3 = new JButton("");
 	
+public static void main(String[] args) {
 	testing5 t = new testing5();
 	t.run();
 	}
@@ -20,10 +22,12 @@ public static void main(String[] args) {
 	frame.add(panel);
 	panel.add(button1);
 	panel.add(button2);
+	panel.add(button3);
 	frame.pack();
 	frame.setVisible(true);
 	button1.addActionListener(this);
 	button2.addActionListener(this);
+	button3.addActionListener(this);
 }
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -34,6 +38,11 @@ public static void main(String[] args) {
 	}
 	if(pre == button2) {
 		JOptionPane.showMessageDialog(null, "I wonder what this button does?");
+	}
+	if(pre == button3) {
+		JOptionPane.showInternalMessageDialog(null, "message", "", JOptionPane.PLAIN_MESSAGE, null);
+		
+	
 	}
 	}
 }
