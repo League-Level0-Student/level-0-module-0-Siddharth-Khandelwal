@@ -22,7 +22,10 @@ public class testing5 implements ActionListener {
 	JButton button4 = new JButton("no context");
 	JButton button5 = new JButton("interesting. confusion. who. what. explain please. wow.");
 	JButton button6 = new JButton("math");
+	JButton button7 = new JButton("Unscramble the Scrambled+Trivia: fi ouy ownk het tapacli fo uytrke htne lccki htis nbtuto, ntere ti ftare gcikcinl hist");
+	JLabel labelok = new JLabel("MINIGAME:");
 	JLabel image;
+	
 
 	public static void main(String[] args) {
 		testing5 t = new testing5();
@@ -53,6 +56,8 @@ public class testing5 implements ActionListener {
 		panel.add(button4);
 		panel.add(button5);
 		panel.add(button6);
+		panel.add(labelok);
+		panel.add(button7);
 		frame.pack();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,6 +69,7 @@ public class testing5 implements ActionListener {
 		button4.addActionListener(this);
 		button5.addActionListener(this);
 		button6.addActionListener(this);
+		button7.addActionListener(this);
 
 		;
 	}
@@ -76,7 +82,7 @@ public class testing5 implements ActionListener {
 			JOptionPane.showMessageDialog(null, "bob the builder");
 		}
 		if (pre == button2) {
-			JOptionPane.showMessageDialog(null, "peppa pig extra sibling????????");
+			JOptionPane.showMessageDialog(null, "what if ............ AND HIS NAME IS JOHN CENA never ate bing chilling");
 		}
 		if (pre == button3) {
 			panel.add(image);
@@ -90,7 +96,7 @@ public class testing5 implements ActionListener {
 			frame.pack();
 		}
 		if (pre == button5) {
-			imageAdd = "https://i2-prod.manchestereveningnews.co.uk/incoming/article21153709.ece/ALTERNATES/s615b/0_EGR_MEN_270721peppa_02JPG.jpg";
+			imageAdd = "https://www.tynker.com/projects/screenshot/5cd60dc27b5986230728f19d/confusing-pictures.png";
 			image = createImage(imageAdd);
 			panel.add(image);
 			frame.pack();
@@ -100,6 +106,15 @@ public class testing5 implements ActionListener {
 			image = createImage(imageAdd);
 			panel.add(image);
 			frame.pack();
+		}
+		if(pre == button7) {
+			String answer = JOptionPane.showInputDialog("What is it?");
+			if(answer.equalsIgnoreCase("Ankara")) {
+				JOptionPane.showMessageDialog(null, "congrats, it's not istanbul, you are one of the small amount of non-turkish people that know that");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Either you clicked without unscrambling or you though it was the obvious(Hint: it's not)");
+			}
 		}
 
 	}
