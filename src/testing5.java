@@ -58,6 +58,7 @@ public class testing5 implements ActionListener {
 		panel.add(button6);
 		panel.add(labelok);
 		panel.add(button7);
+		frame.setSize(5,5);
 		frame.pack();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
