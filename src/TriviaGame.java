@@ -50,17 +50,30 @@ public class TriviaGame implements ActionListener {
 				if (easy2.equalsIgnoreCase("Spiderman")) {
 					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
 					String easy3 = JOptionPane.showInputDialog("What sport does Lebron James play?");
-					if(easy3.equalsIgnoreCase("basketball")) {
+					if (easy3.equalsIgnoreCase("basketball")) {
 						JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-					}
-					else {
-						JOptionPane.showMessageDialog(null, "Incorrect");	
+						String easy4 = JOptionPane.showInputDialog("How many side does an octagon have?(Word Answer)");
+						if (easy4.equalsIgnoreCase("eight")) {
+							JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
+							String easy5 = JOptionPane.showInputDialog("Who was the first man on the Moon?");
+							if (easy5.equalsIgnoreCase("Neil Armstrong")) {
+								JOptionPane.showMessageDialog(null, "Correct! You have completed easy trivia game!");
+							}
+							else {
+								JOptionPane.showMessageDialog(null, "Incorrect SCORE:4");
+							}
+							}
+						else {
+							JOptionPane.showMessageDialog(null, "Incorrect SCORE:3");
+						}
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect SCORE:2");
 					}
 				} else {
-					JOptionPane.showMessageDialog(null, "Incorrect");
+					JOptionPane.showMessageDialog(null, "Incorrect SCORE:1");
 				}
 			} else {
-				JOptionPane.showMessageDialog(null, "Incorrect");
+				JOptionPane.showMessageDialog(null, "Incorrect SCORE:0");
 			}
 		}
 	}
