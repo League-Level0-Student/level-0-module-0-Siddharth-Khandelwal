@@ -16,6 +16,7 @@ public class TriviaGame implements ActionListener {
 	JLabel label1 = new JLabel("Easy:");
 	JLabel label2 = new JLabel("Medium:");
 	JLabel label3 = new JLabel("Hard:");
+	int score = 0;
 
 	public static void main(String[] args) {
 		TriviaGame t = new TriviaGame();
@@ -43,10 +44,10 @@ public class TriviaGame implements ActionListener {
 		// TODO Auto-generated method stub
 		JButton pressed = (JButton) e.getSource();
 		if (pressed == button1) {
-			String easy1 = JOptionPane.showInputDialog("Question 1: What is the capital of Italy?");
+			String easy1 = JOptionPane.showInputDialog("What is the capital of Italy?");
 			if (easy1.equalsIgnoreCase("rome")) {
 				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-				String easy2 = JOptionPane.showInputDialog("Question 2: What character is Tom Holland in the Marvel Cinematic Universe?(No hyphen)");
+				String easy2 = JOptionPane.showInputDialog("What character is Tom Holland in the Marvel Cinematic Universe?(No hyphen)");
 				if (easy2.equalsIgnoreCase("Spiderman")) {
 					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
 					String easy3 = JOptionPane.showInputDialog("What sport does Lebron James play?");
@@ -75,7 +76,8 @@ public class TriviaGame implements ActionListener {
 			}
 		}
 		if (pressed == button2) {
-			String med1 = JOptionPane.showInputDialog("What city was destroyed first by American atomic bombs in WWII?");
+			String med1 = JOptionPane
+					.showInputDialog("What city was destroyed first by American atomic bombs in WWII?");
 			if (med1.equalsIgnoreCase("Hiroshima")) {
 				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
 				String med2 = JOptionPane.showInputDialog("What is the only mammal that can't jump?");
@@ -108,6 +110,50 @@ public class TriviaGame implements ActionListener {
 			}
 
 		}
-		if (pressed == button3)
+		if (pressed == button3) {
+			String hard1 = JOptionPane.showInputDialog("What language is spoken in Brazil?");
+			if (hard1.equalsIgnoreCase("Portuguese")) {
+				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
+				String hard2 = JOptionPane.showInputDialog("Silverstone is a circuit in what car racing league?");
+				if (hard2.equalsIgnoreCase("Formula 1")) {
+					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
+					String hard3 = JOptionPane.showInputDialog("What does BBC stand for?");
+					if (hard3.equalsIgnoreCase("British Broadcasting corporation")) {
+						JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
+						String hard4 = JOptionPane.showInputDialog("What is the largest desert in the world?");
+						if (hard4.equalsIgnoreCase("Antarctica")) {
+							JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
+							String hard5 = JOptionPane
+									.showInputDialog("What is the only non European double land locked country?");
+							if (hard5.equalsIgnoreCase("Uzbekistan")) {
+								JOptionPane.showMessageDialog(null, "Correct! You have completed hard trivia game!");
+							} else {
+								JOptionPane.showMessageDialog(null, "Incorrect SCORE:4");
+							}
+						} else {
+							JOptionPane.showMessageDialog(null, "Incorrect SCORE:3");
+						}
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect SCORE:2");
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "Incorrect SCORE:1");
+				}
+			} else {
+				JOptionPane.showMessageDialog(null, "Incorrect SCORE:0");
+			}
+		}
+	}
+	boolean askQuestion (String question, String answer) {
+		String guess = JOptionPane.showInputDialog(question);
+		if(guess.equalsIgnoreCase(answer)) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score++;
+			return true;
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "Incorrect. Score: "+score);
+		return false;
+		}
 	}
 }
