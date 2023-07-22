@@ -44,105 +44,45 @@ public class TriviaGame implements ActionListener {
 		// TODO Auto-generated method stub
 		JButton pressed = (JButton) e.getSource();
 		if (pressed == button1) {
-			String easy1 = JOptionPane.showInputDialog("What is the capital of Italy?");
-			if (easy1.equalsIgnoreCase("rome")) {
-				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-				String easy2 = JOptionPane.showInputDialog("What character is Tom Holland in the Marvel Cinematic Universe?(No hyphen)");
-				if (easy2.equalsIgnoreCase("Spiderman")) {
-					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-					String easy3 = JOptionPane.showInputDialog("What sport does Lebron James play?");
-					if (easy3.equalsIgnoreCase("basketball")) {
-						JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-						String easy4 = JOptionPane.showInputDialog("How many side does an octagon have?(Word Answer)");
-						if (easy4.equalsIgnoreCase("eight")) {
-							JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-							String easy5 = JOptionPane.showInputDialog("Who was the first man on the Moon?");
-							if (easy5.equalsIgnoreCase("Neil Armstrong")) {
-								JOptionPane.showMessageDialog(null, "Correct! You have completed easy trivia game!");
-							} else {
-								JOptionPane.showMessageDialog(null, "Incorrect SCORE:4");
-							}
-						} else {
-							JOptionPane.showMessageDialog(null, "Incorrect SCORE:3");
+		if(askQuestion("What is the capital of Italy?","Rome")) {
+			if(askQuestion("What character is Tom Holland in the Marvel Cinematic Universe?(No hyphen)","Spiderman")) {
+				if(askQuestion("What sport does Lebron James play?","Basketball")) {
+					if(askQuestion("How many side does an octagon have?(Word Answer)","eight")) {
+						if(askQuestion("Who was the first man on the Moon?","Neil Armstrong")) {
+							JOptionPane.showMessageDialog(null, "Congradulations, you have completed easy trivia game!");
 						}
-					} else {
-						JOptionPane.showMessageDialog(null, "Incorrect SCORE:2");
 					}
-				} else {
-					JOptionPane.showMessageDialog(null, "Incorrect SCORE:1");
 				}
-			} else {
-				JOptionPane.showMessageDialog(null, "Incorrect SCORE:0");
 			}
 		}
-		if (pressed == button2) {
-			String med1 = JOptionPane
-					.showInputDialog("What city was destroyed first by American atomic bombs in WWII?");
-			if (med1.equalsIgnoreCase("Hiroshima")) {
-				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-				String med2 = JOptionPane.showInputDialog("What is the only mammal that can't jump?");
-				if (med2.equalsIgnoreCase("elephant")) {
-					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-					String med3 = JOptionPane.showInputDialog("What is arachmophobia a fear of?(Plural)");
-					if (med3.equalsIgnoreCase("spiders")) {
-						JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-						String med4 = JOptionPane.showInputDialog("What modern day country is Chernobyl in?");
-						if (med4.equalsIgnoreCase("Ukraine")) {
-							JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-							String med5 = JOptionPane
-									.showInputDialog("What country possesed Alaska before the United States?");
-							if (med5.equalsIgnoreCase("Russia")) {
-								JOptionPane.showMessageDialog(null, "Correct! You have completed medium trivia game!");
-							} else {
-								JOptionPane.showMessageDialog(null, "Incorrect SCORE:4");
-							}
-						} else {
-							JOptionPane.showMessageDialog(null, "Incorrect SCORE:3");
-						}
-					} else {
-						JOptionPane.showMessageDialog(null, "Incorrect SCORE:2");
-					}
-				} else {
-					JOptionPane.showMessageDialog(null, "Incorrect SCORE:1");
-				}
-			} else {
-				JOptionPane.showMessageDialog(null, "Incorrect SCORE:0");
-			}
-
 		}
-		if (pressed == button3) {
-			String hard1 = JOptionPane.showInputDialog("What language is spoken in Brazil?");
-			if (hard1.equalsIgnoreCase("Portuguese")) {
-				JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-				String hard2 = JOptionPane.showInputDialog("Silverstone is a circuit in what car racing league?");
-				if (hard2.equalsIgnoreCase("Formula 1")) {
-					JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-					String hard3 = JOptionPane.showInputDialog("What does BBC stand for?");
-					if (hard3.equalsIgnoreCase("British Broadcasting corporation")) {
-						JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-						String hard4 = JOptionPane.showInputDialog("What is the largest desert in the world?");
-						if (hard4.equalsIgnoreCase("Antarctica")) {
-							JOptionPane.showMessageDialog(null, "Correct! Click below for next Question");
-							String hard5 = JOptionPane
-									.showInputDialog("What is the only non European double land locked country?");
-							if (hard5.equalsIgnoreCase("Uzbekistan")) {
-								JOptionPane.showMessageDialog(null, "Correct! You have completed hard trivia game!");
-							} else {
-								JOptionPane.showMessageDialog(null, "Incorrect SCORE:4");
+		if(pressed == button2) {
+			if(askQuestion("What city was destroyed first by American atomic bombs in WWII?","Hiroshima")) {
+				if(askQuestion("What is the only mammal that can't jump?","Elephant")) {
+					if(askQuestion("What is arachnaphobia a fear of?(plural)","Spiders")) {
+						if(askQuestion("What modern day country is Chernobyl in?","Ukraine")) {
+							if(askQuestion("What country possesed Alaska before the United States?","Russia")) {
+								JOptionPane.showMessageDialog(null, "Congradulations, you have completed medium trivia game!");
 							}
-						} else {
-							JOptionPane.showMessageDialog(null, "Incorrect SCORE:3");
 						}
-					} else {
-						JOptionPane.showMessageDialog(null, "Incorrect SCORE:2");
 					}
-				} else {
-					JOptionPane.showMessageDialog(null, "Incorrect SCORE:1");
 				}
-			} else {
-				JOptionPane.showMessageDialog(null, "Incorrect SCORE:0");
 			}
 		}
+		if(pressed == button3) {
+			if(askQuestion("What language is spoken in Brazil?","Portuguese")) {
+				if(askQuestion("Silverstone is a circuit in what car racing league?(Word Form)","Formula One")) {
+					if(askQuestion("What does BBC stand for?","British Broadcasting Corporation")) {
+						if(askQuestion("What is the largest desert in the world?","Antarctica")) {
+							if(askQuestion("What is the only non-European double landlocked country?","Uzbekistan")) {
+								JOptionPane.showMessageDialog(null, "Congradulations, you have completed hard trivia game!");
+							}
+						}
+					}
+				}
+			}
+		}
+		score = 0;
 	}
 	boolean askQuestion (String question, String answer) {
 		String guess = JOptionPane.showInputDialog(question);
